@@ -1,0 +1,54 @@
+.card,
+.card_border {
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background-color: var(--color-primary-3);
+  border: 4px solid var(--color-primary-3);
+  width: 100%;
+  box-shadow: 0 10px 20px hsl(207deg 46% 68% / 41%), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card .card_img,
+.card_border .card_img {
+  overflow: hidden;
+  height: 0;
+  border-radius: 0.3rem 0.3rem 0 0;
+  padding-bottom: 55%;
+}
+.card .card_img > img,
+.card_border .card_img > img {
+  width: 100%;
+}
+.card .card_body,
+.card_border .card_body {
+  padding: 0.5rem;
+}
+.card .card_body .card_title,
+.card_border .card_body .card_title {
+  transition: color 0.5s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:  var(--color-complement-1);
+  margin-bottom: 0.2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .card .card_body {
+    padding: 1rem;
+  }
+  .card .card_body .card_title {
+    margin-bottom: 0.5rem;
+  }
+}
+.card .card_body .card_description,
+.card_border .card_body .card_description {
+  /* color: hsl(60deg 80% 50%); */
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.card_border {
+  border: 4px solid #363d4e;
+}
+
+/*# sourceMappingURL=card.css.map */
