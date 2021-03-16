@@ -3,6 +3,7 @@ import Experience from "./components/experience/Experience";
 import Navbar from "./components/navbar/Navbar";
 import Portfolio from "./components/portfolio/Portfolio";
 import Profile from "./components/profile/Profile";
+import './style.scss'
 
 function App() {
   useEffect(() => {

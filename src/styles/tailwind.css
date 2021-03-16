@@ -55,7 +55,7 @@
 }
 
 body {
-  background-color: hsl(204deg 86% 99%);
+  /* background-color: hsl(204deg 86% 99%); */
 }
 
 .container {
@@ -65,7 +65,11 @@ body {
 
 @media only screen and (min-width: 1200px) {
   .container {
-    margin: 0px auto 0px auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 12rem;
+
+    /* margin: 0px auto 0px auto; */
   }
 }
 

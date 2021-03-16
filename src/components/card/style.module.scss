@@ -1,15 +1,14 @@
-@import '@material/elevation';
-@import '/src/styles/variable.scss';
+@import "@material/elevation";
+@import "/src/styles/variable.scss";
+@import "/src/styles/shadeGenerator.scss";
 
 .card,
 .card_border {
   border-radius: 0.3rem;
   overflow: hidden;
-  background-color:#f8fcff;
+  background-color: makeColorPalette($color-primary-0, 400);
   width: 100%;
-  @include elevation(1,$color-primary-4)
-  /* box-shadow: 0 10px 20px hsl(207deg 46% 68% / 41%),
-    0 6px 6px rgba(0, 0, 0, 0.23); */
+  @include elevation(2,black,0.1);
 }
 
 .card .card_img,
@@ -31,9 +30,8 @@
 .card_border .card_body .card_title {
   font-size: 2rem;
   font-family: "Times New Roman", Times, serif;
-  color: #00426d;
+  color: makeColorPalette($color-primary-4,900);
   font-weight: 600;
-  /* color:  var(--color-complement-1); */
   margin-bottom: 0.2rem;
 }
 
@@ -47,15 +45,12 @@
 }
 .card .card_body .card_description,
 .card_border .card_body .card_description {
-  /* color: hsl(60deg 80% 50%); */
-  /* color: white; */
-  color: #616b70;
-
+  color: makeColorPalette($color-primary-4,900);
+  font-size: 1.1rem;
+  line-height: 1.1;
   margin-bottom: 0.5rem;
 }
 
 .card_border {
   border: 4px solid #363d4e;
 }
-
-/*# sourceMappingURL=card.css.map */
