@@ -1,4 +1,4 @@
-@import '/src/styles//variable.scss';
+@import "/src/styles//variable.scss";
 @import "/src/styles/shadeGenerator.scss";
 @import "@material/elevation";
 
@@ -10,7 +10,7 @@
   right: 0;
   top: 0;
   height: var(--navbar-height);
-  @include elevation(4,black,0.1);
+  @include elevation(4, black, 0.1);
   z-index: 99999;
 }
 
@@ -19,30 +19,6 @@
   height: 100%;
   justify-content: center;
 }
-/* 
-.navbar::before {
-  content: "";
-  width: 0.5rem;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: var(--color-complement-4);
-  box-shadow: 1px 0px 3px var(--color-complement-1),
-    0px 0px 2px var(--color-complement-4);
-}
-
-.navbar::after {
-  content: "";
-  width: 0.5rem;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: var(--color-complement-4);
-  box-shadow: -1px 0px 3px var(--color-complement-1),
-    0px 0px 2px var(--color-complement-4);
-} */
 
 .navbar__item {
   font-size: 1.2rem;

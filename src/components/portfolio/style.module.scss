@@ -26,15 +26,7 @@
     display: block;
     position: relative;
   }
-  // .heading::before {
-  //   content: "";
-  //   position: absolute;
-  //   height: 2px;
-  //   width: 100%;
-  //   left: 0;
-  //   bottom: 0;
-  //   background-color: black;
-  // }
+
 
   .summary {
     text-align: left;
@@ -51,7 +43,6 @@
 
     border-bottom-left-radius: $container-border-radius;
     border-bottom-right-radius: $container-border-radius;
-    background-color: makeColorPalette($color-primary-1, 50);
     flex-direction: column;
   }
 

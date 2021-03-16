@@ -21,7 +21,7 @@ function Portfolio() {
         >
           <Card>
             <CardImage>
-              <img src={image} />
+              <img src='https://cdn.dribbble.com/users/7262166/screenshots/15265516/media/c0192a9caad7f1f2dce0a723468c841e.png?compress=1&resize=800x600' />
             </CardImage>
             <CardBody>
               <CardTitle>TimerCards</CardTitle>

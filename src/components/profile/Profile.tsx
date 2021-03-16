@@ -2,6 +2,7 @@ import React, { MouseEvent, useEffect, useRef } from "react";
 import style from "./style.module.scss";
 import profileImage from "./profileImage.jpg";
 import { profile } from "node:console";
+import { animated, useSpring } from "react-spring";
 
 const scale = (val: number, src: number[], dst: number[]) => {
   return ((val - src[0]) / (src[1] - src[0])) * (dst[1] - dst[0]) + dst[0];
@@ -65,13 +66,42 @@ function Profile() {
   //       otherRef.current?.removeEventListener("mousemove", onMouseMove);
   //     };
   //   }, []);
+  const [isBooped, setIsBooped] = React.useState(false);
+  const customStyle = useSpring({
+    transform: isBooped ? `rotate(${10}deg)` : `rotate(0deg)`,
+    config: {
+      tension: 300,
+      friction: 10,
+    },
+  });
+
+  useEffect(() => {
+    if (!isBooped) {
+      return;
+    }
+    const timeoutId = window.setTimeout(() => {
+      setIsBooped(false);
+    }, 100);
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [isBooped]);
+  const trigger = () => {
+    setIsBooped(true);
+  };
+
   return (
     <>
       <div className={style.profile_container}>
         <div className={style.profile_image_container}>
-          <div className={style.profile_image}>
+          <animated.div
+            onMouseDown={trigger}
+            onMouseEnter={trigger}
+            style={customStyle}
+            className={style.profile_image}
+          >
             <img src={profileImage} />
-          </div>
+          </animated.div>
         </div>
         <div className={style.profile_description}>
           <div className={style.open_capsule}>
