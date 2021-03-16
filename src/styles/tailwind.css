@@ -54,18 +54,30 @@
   --navbar-height: 3rem;
 }
 
-body{
-  /* background-color: var(--color-primary-1); */
+body {
+  background-color: hsl(204deg 86% 99%);
 }
 
 .container {
   margin: 0px auto 0px auto;
-  padding: var(--navbar-height) 4px 0px 4px;
+  padding: 0px 4px 0px 4px;
 }
 
 @media only screen and (min-width: 1200px) {
   .container {
     margin: 0px auto 0px auto;
-    padding: var(--navbar-height) 2rem 0px 2rem;
   }
+}
+
+.top_padding {
+  padding: var(--navbar-height) 0rem 0px 0rem;
+}
+
+main section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+main section:nth-of-type(2) {
+  /* background-color: hsl(235deg 29% 95%); */
 }

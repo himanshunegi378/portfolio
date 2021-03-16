@@ -1,5 +1,5 @@
 import React, { MouseEvent, useEffect, useRef } from "react";
-import style from "./style.module.css";
+import style from "./style.module.scss";
 import profileImage from "./profileImage.jpg";
 import { profile } from "node:console";
 

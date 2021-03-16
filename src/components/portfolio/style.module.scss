@@ -1,0 +1,74 @@
+@import "@material/elevation";
+@import "/src/styles/variable.scss";
+@import "/src/styles/shadeGenerator.scss";
+.portfolio_container {
+  $container-padding: 1rem;
+  $container-border-radius: 15px;
+  margin: 1rem auto 0rem auto;
+  // padd ing: $container-padding;
+  position: relative;
+  width: 100%;
+  background: white;
+  // border: 1px solid rgb(213 213 213 / 53%);
+  border-radius: $container-border-radius;
+  @include elevation(4);
+
+  .heading {
+    text-align: left;
+    font-size: 2rem;
+    // margin: -$container-padding;
+    padding: $container-padding;
+    background: makeColorPalette($color-primary-2, 900);
+    border-top-left-radius: $container-border-radius;
+    border-top-right-radius: $container-border-radius;
+    color: makeColorPalette($color-primary-1, 50);
+    font-weight: 700;
+    display: block;
+    position: relative;
+  }
+  // .heading::before {
+  //   content: "";
+  //   position: absolute;
+  //   height: 2px;
+  //   width: 100%;
+  //   left: 0;
+  //   bottom: 0;
+  //   background-color: black;
+  // }
+
+  .summary {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(204deg 9% 53%);
+  }
+
+  .portfolio_content_container {
+    // margin-top: 2rem !important;
+    display: grid;
+    gap: 1rem;
+    padding: $container-padding + 0.5rem $container-padding;
+
+    border-bottom-left-radius: $container-border-radius;
+    border-bottom-right-radius: $container-border-radius;
+    background-color: makeColorPalette($color-primary-1, 50);
+    flex-direction: column;
+  }
+
+  .portfolio_content_container__item {
+    /* margin-bottom: 1rem; */
+  }
+
+  @media only screen and (min-width: 576px) {
+    .portfolio_content_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .portfolio_content_container {
+      gap: 1rem;
+    }
+  }
+}

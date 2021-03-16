@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Experience from "./components/experience/Experience";
 import Navbar from "./components/navbar/Navbar";
 import Portfolio from "./components/portfolio/Portfolio";
 import Profile from "./components/profile/Profile";
@@ -15,14 +16,23 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="container">
-        <div className='mb-12'>
-          <Profile />
-        </div>
-        <div>
-          <Portfolio />
-        </div>
-      </div>
+      <main className='top_padding'>
+        <section className="">
+          <div className="container">
+            <Profile />
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <Portfolio />
+          </div>
+        </section>
+        <section className="mb-8">
+          <div className="container">
+            <Experience />
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

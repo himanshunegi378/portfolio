@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./style.module.css";
+import style from "./style.module.scss";
 
 function Card(props: { img: string; title: string; description: string }) {
   return (

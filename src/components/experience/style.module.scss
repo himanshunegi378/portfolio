@@ -1,0 +1,137 @@
+@use "sass:color";
+@import "@material/elevation";
+@import "/src/styles/variable.scss";
+@import "/src/styles/mixin.scss";
+@import "/src/styles/shadeGenerator.scss";
+
+.container {
+  $container-padding: 1rem;
+  $container-border-radius: 15px;
+
+  background: white;
+  // padding: $container-padding;
+  // border: 1px solid rgb(213 213 213 / 53%);
+  border-radius: $container-border-radius;
+  @include elevation(4);
+
+  .heading {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    // margin: -$container-padding;
+    padding: $container-padding;
+    background: makeColorPalette($color-primary-2, 900);
+    border-top-left-radius: $container-border-radius;
+    border-top-right-radius: $container-border-radius;
+    color: makeColorPalette($color-primary-1, 50);
+    overflow: hidden;
+    position: relative;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   height: 2px;
+    //   width: 100%;
+    //   left: 0;
+    //   bottom: 0;
+    //   background-color: black;
+    // }
+  }
+
+  .experience_card_list {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding: $container-padding+0.5rem $container-padding;
+    border-bottom-left-radius: $container-border-radius;
+    border-bottom-right-radius: $container-border-radius;
+    background-color: makeColorPalette($color-primary-1, 50);
+
+    .experience_card_wrapper {
+      @include elevation(2, $color-primary-4);
+      // box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      padding: 1rem 0.5rem;
+      // margin: 1rem 0rem;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      background-color: color.scale(
+        $color: $color-primary-1,
+        $saturation: 90%,
+        $lightness: 95%
+      );
+
+      .experience_card {
+        display: grid;
+        grid-template-areas:
+          "name name name name"
+          "post post duration duration"
+          "summary summary summary summary";
+
+        .company_name {
+          line-height: 1;
+          grid-area: name;
+          overflow: auto hidden;
+          white-space: nowrap;
+          font-size: 2rem;
+          font-family: "Times New Roman", Times, serif;
+          color: color.scale(
+            $color: $color-primary-1,
+            $saturation: 100%,
+            $lightness: -70%
+          );
+          font-weight: 600;
+          @media only screen and (min-width: $md) {
+            @include scrollbars(0.5em, slategray);
+          }
+        }
+
+        .post {
+          line-height: 1;
+          grid-area: post;
+          font-weight: 500;
+          color: color.scale(
+            $color: $color-primary-1,
+            $saturation: -50%,
+            $lightness: -50%
+          );
+        }
+        .duration {
+          justify-self: end;
+          line-height: 1;
+          grid-area: duration;
+          font-weight: 500;
+          color: color.scale(
+            $color: $color-primary-1,
+            $saturation: -50%,
+            $lightness: -50%
+          );
+        }
+        .summary {
+          grid-area: summary;
+          margin-top: 0.5rem;
+          color: #616b70;
+
+          .highlight {
+            color: $color-complement-4;
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: $md) {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+
+      .experience_card_wrapper {
+        padding: 2rem;
+        .company_name {
+          line-height: normal !important;
+        }
+      }
+    }
+  }
+}
