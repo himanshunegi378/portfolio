@@ -8,7 +8,7 @@
   // padd ing: $container-padding;
   position: relative;
   width: 100%;
-  background: white;
+  background: makeColorPalette($color-complement-3,50);
   // border: 1px solid rgb(213 213 213 / 53%);
   border-radius: $container-border-radius;
   @include elevation(4);
@@ -26,7 +26,6 @@
     display: block;
     position: relative;
   }
-
 
   .summary {
     text-align: left;
@@ -47,7 +46,7 @@
   }
 
   .portfolio_content_container__item {
-    /* margin-bottom: 1rem; */
+
   }
 
   @media only screen and (min-width: 576px) {
@@ -61,5 +60,51 @@
     .portfolio_content_container {
       gap: 1rem;
     }
+  }
+
+  .custom_card_title_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .title {
+      grid-area: title;
+      margin-right: 1rem;
+      line-height: 1;
+    }
+    .link_container {
+      grid-area: links;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      font-size: 0.9rem;
+
+      .link_item {
+        margin-right: 1rem;
+      }
+      a {
+        transition: color 0.3s;
+        color: makeColorPalette($color-complement-0, 800);
+
+        &:link {
+        }
+
+        &:visited {
+          // text-decoration: underline;
+        }
+
+        &:hover {
+          color: makeColorPalette($color-primary-0, 500);
+        }
+
+        &:active {
+          color: makeColorPalette($color-primary-4, 800);
+        }
+      }
+    }
+  }
+
+  .custom_card_description_container{
+    color: makeColorPalette(grey,500) !important;
   }
 }

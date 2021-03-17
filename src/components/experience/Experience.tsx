@@ -15,7 +15,7 @@ function Experience() {
             >
               Taxvisor
             </a>
-            <div className={style.post}>web developer</div>
+            <div className={style.post}>Web Developer</div>
             <div className={style.duration}>Mar 2020 - Sep 2020</div>
             <div className={style.summary}>
               Worked on redesigning the company website and developing api

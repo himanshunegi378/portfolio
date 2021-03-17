@@ -6,9 +6,10 @@
 .card_border {
   border-radius: 0.3rem;
   overflow: hidden;
-  background-color: makeColorPalette($color-primary-0, 400);
+  background-color: makeColorPalette($color-primary-1, 50);
+
   width: 100%;
-  @include elevation(2,black,0.1);
+  @include elevation(2, black, 0.1);
 }
 
 .card .card_img,
@@ -30,7 +31,7 @@
 .card_border .card_body .card_title {
   font-size: 2rem;
   font-family: "Times New Roman", Times, serif;
-  color: makeColorPalette($color-primary-4,900);
+  color: makeColorPalette($color-primary-4, 900);
   font-weight: 600;
   margin-bottom: 0.2rem;
 }
@@ -45,7 +46,7 @@
 }
 .card .card_body .card_description,
 .card_border .card_body .card_description {
-  color: makeColorPalette($color-primary-4,900);
+  color: makeColorPalette($color-primary-4, 900);
   font-size: 1.1rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;

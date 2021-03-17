@@ -8,7 +8,7 @@
   $container-padding: 1rem;
   $container-border-radius: 15px;
 
-  background: white;
+  background: makeColorPalette($color-complement-3,50);
   // padding: $container-padding;
   // border: 1px solid rgb(213 213 213 / 53%);
   border-radius: $container-border-radius;

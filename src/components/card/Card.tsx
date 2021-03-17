@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { HTMLProps, PropsWithChildren, ReactNode } from "react";
 import style from "./style.module.scss";
 
 export function Card(props: PropsWithChildren<{}>) {
@@ -9,18 +9,52 @@ export function Card(props: PropsWithChildren<{}>) {
   );
 }
 
-export function CardImage(props: PropsWithChildren<{}>) {
-  return <div className={style.card_img}>{props.children}</div>;
+export function CardImage({
+  children,
+  ...props
+}: { children: ReactNode } & HTMLProps<HTMLDivElement>) {
+  const { className, ...rest } = props;
+
+  return (
+    <div {...rest} className={`${style.card_img} ${className}`}>
+      {children}
+    </div>
+  );
 }
 
-export function CardBody(props: PropsWithChildren<{}>) {
-  return <div className={style.card_body}>{props.children}</div>;
+export function CardBody({
+  children,
+  ...props
+}: { children: ReactNode } & HTMLProps<HTMLDivElement>) {
+  const { className, ...rest } = props;
+
+  return (
+    <div {...rest} className={`${style.card_body} ${className}`}>
+      {children}
+    </div>
+  );
 }
 
-export function CardTitle(props: PropsWithChildren<{}>) {
-  return <div className={style.card_title}>{props.children}</div>;
+export function CardTitle({
+  children,
+  ...props
+}: { children: ReactNode } & HTMLProps<HTMLDivElement>) {
+  const { className, ...rest } = props;
+  return (
+    <div {...rest} className={`${style.card_title} ${className}`}>
+      {children}
+    </div>
+  );
 }
 
-export function CardDescription(props: PropsWithChildren<{}>) {
-  return <div className={style.card_description}>{props.children}</div>;
+export function CardDescription({
+  children,
+  ...props
+}: { children: ReactNode } & HTMLProps<HTMLDivElement>) {
+  const { className, ...rest } = props;
+  return (
+    <div {...rest} className={`${className} ${style.card_description} `}>
+      {children}
+    </div>
+  );
 }

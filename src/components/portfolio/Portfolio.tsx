@@ -14,41 +14,57 @@ function Portfolio() {
       <div className={style.heading}>My Projects</div>
       {/* <div className={style.summary}></div> */}
       <div className={style.portfolio_content_container}>
-        <a
-          href="https://timercards.com/"
-          target="_blank"
-          className={style.portfolio_content_container__item}
-        >
+        <div className={style.portfolio_content_container__item}>
           <Card>
             <CardImage>
-              <img src='https://cdn.dribbble.com/users/7262166/screenshots/15265516/media/c0192a9caad7f1f2dce0a723468c841e.png?compress=1&resize=800x600' />
+              <img src="https://cdn.dribbble.com/users/7262166/screenshots/15265516/media/c0192a9caad7f1f2dce0a723468c841e.png?compress=1&resize=800x600" />
             </CardImage>
             <CardBody>
-              <CardTitle>TimerCards</CardTitle>
-              <CardDescription>
+              <CardTitle className={style.custom_card_title_container}>
+                <span className={style.title}>TimerCards</span>
+                <div className={style.link_container}>
+                  <a
+                    href="https://timercards.com/"
+                    target="_blank"
+                    className={style.link_item}
+                  >
+                    Live Project
+                  </a>
+                  {/* <a className={style.link_item}>Source Code</a> */}
+                </div>
+              </CardTitle>
+              <CardDescription className={style.custom_card_description_container}>
                 Countdown timer app with functionality to chain one timer after
                 another
               </CardDescription>
             </CardBody>
           </Card>
-        </a>
-        <a
-          href="https://himanshunegi378.github.io/media-consumption-tracker/"
-          target="_blank"
-          className={style.portfolio_content_container__item}
-        >
+        </div>
+        <div className={style.portfolio_content_container__item}>
           <Card>
             <CardImage>
               <img src={image} />
             </CardImage>
             <CardBody>
-              <CardTitle>Media Search</CardTitle>
-              <CardDescription>
+              <CardTitle className={style.custom_card_title_container}>
+                <span className={style.title}>MediaSearch</span>
+                <div className={style.link_container}>
+                  <a
+                    href="https://himanshunegi378.github.io/media-consumption-tracker/"
+                    target="_blank"
+                    className={style.link_item}
+                  >
+                    Live Project
+                  </a>
+                  {/* <a className={style.link_item}>Source Code</a> */}
+                </div>
+              </CardTitle>
+              <CardDescription className={style.custom_card_description_container}>
                 web app to get information of tv shows and movies
               </CardDescription>
             </CardBody>
           </Card>
-        </a>
+        </div>
       </div>
     </div>
   );
