@@ -9,8 +9,27 @@ function Experience() {
         <div className={style.experience_card_wrapper}>
           <div className={style.experience_card}>
             <a
+              href="https://www.blackcoffer.com/"
+              target="_blank"
+              rel="noreferrer"
+              className={style.company_name}
+            >
+              Blackcoffer
+            </a>
+            <div className={style.post}>Web Developer</div>
+            <div className={style.duration}>Mar 2021 - Present</div>
+            <div className={style.summary}>
+              Working on variety of projects such as website development, backend development and maintenance using <span className={style.highlight}>React</span>, <span className={style.highlight}>express</span>,
+              <span className={style.highlight}> Azure function </span> and <span className={style.highlight}>various database technologies</span>
+            </div>
+          </div>
+        </div>
+        <div className={style.experience_card_wrapper}>
+          <div className={style.experience_card}>
+            <a
               href="https://taxvisor.in/"
               target="_blank"
+              rel="noreferrer"
               className={style.company_name}
             >
               Taxvisor
@@ -20,7 +39,7 @@ function Experience() {
             <div className={style.summary}>
               Worked on redesigning the company website and developing api
               endpoints for gst filing using <span className={style.highlight}>React</span>, <span className={style.highlight}>Nextjs</span>,
-               <span className={style.highlight}> firebase</span> and <span className={style.highlight}>SQL</span>
+              <span className={style.highlight}> firebase</span> and <span className={style.highlight}>SQL</span>
             </div>
           </div>
         </div>
@@ -34,12 +53,12 @@ function Experience() {
             <div className={style.duration}>July 2019 - Aug 2019</div>
             <div className={style.summary}>
               Worked on creating website using weebly and registering them on directory
-              listing. 
+              listing.
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

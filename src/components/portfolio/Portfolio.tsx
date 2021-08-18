@@ -17,7 +17,7 @@ function Portfolio() {
         <div className={style.portfolio_content_container__item}>
           <Card>
             <CardImage>
-              <img src="https://cdn.dribbble.com/users/7262166/screenshots/15265516/media/c0192a9caad7f1f2dce0a723468c841e.png?compress=1&resize=800x600" />
+              <img src="https://cdn.dribbble.com/users/7262166/screenshots/15265516/media/c0192a9caad7f1f2dce0a723468c841e.png?compress=1&resize=800x600" alt='timercards'/>
             </CardImage>
             <CardBody>
               <CardTitle className={style.custom_card_title_container}>
@@ -26,6 +26,7 @@ function Portfolio() {
                   <a
                     href="https://timercards.com/"
                     target="_blank"
+                    rel="noreferrer"
                     className={style.link_item}
                   >
                     Live Project
@@ -43,7 +44,7 @@ function Portfolio() {
         <div className={style.portfolio_content_container__item}>
           <Card>
             <CardImage>
-              <img src={image} />
+              <img src={image} alt='Media consumption tracker'/>
             </CardImage>
             <CardBody>
               <CardTitle className={style.custom_card_title_container}>
@@ -52,6 +53,7 @@ function Portfolio() {
                   <a
                     href="https://himanshunegi378.github.io/media-consumption-tracker/"
                     target="_blank"
+                    rel="noreferrer"
                     className={style.link_item}
                   >
                     Live Project

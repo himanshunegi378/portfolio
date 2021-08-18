@@ -1,4 +1,4 @@
-import React, { MouseEvent, useEffect, useRef } from "react";
+import React from "react";
 import style from "./style.module.scss";
 import profileImage from "./profileImage.jpg";
 import { animated, useSpring } from "react-spring";
@@ -30,7 +30,7 @@ function Profile() {
             style={{ transform: props.xys.interpolate(trans) }}
             className={style.profile_image}
           >
-            <img src={profileImage} />
+            <img src={profileImage} alt='profile'/>
           </animated.div>
         </div>
         <div className={style.profile_description}>
