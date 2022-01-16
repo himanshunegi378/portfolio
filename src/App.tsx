@@ -3,17 +3,22 @@ import Experience from "./components/experience/Experience";
 import Navbar from "./components/navbar/Navbar";
 import Portfolio from "./components/portfolio/Portfolio";
 import Profile from "./components/profile/Profile";
-import './style.scss'
+import { SocialNav } from "./components/socialNav/SocialNav";
+import "./style.scss";
 
 function App() {
-
   return (
     <div>
       <Navbar />
-      <main className='top_padding'>
+      <main className="top_padding">
         <section className="">
           <div className="container">
             <Profile />
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <SocialNav />
           </div>
         </section>
         <section>
