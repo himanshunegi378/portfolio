@@ -4,12 +4,13 @@
 
 .navbar__container {
   position: fixed;
-  background-color: #222734;
+  background-color: #16304B;
   width: 100%;
   left: 0;
   right: 0;
   top: 0;
   height: var(--navbar-height);
+  padding: 0 1rem;
   @include elevation(4, black, 0.1);
   z-index: 99999;
 }
@@ -17,7 +18,7 @@
 .navbar {
   display: flex;
   height: 100%;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .navbar__item {
@@ -25,7 +26,7 @@
   font-weight: 600;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
-  border-bottom: 3px solid $color-complement-4;
-  padding: 0.7rem 0.5rem;
+  border-bottom: 3px solid white;
+  // padding: 0.7rem 0.5rem;
 }
 
