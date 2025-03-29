@@ -6,6 +6,22 @@ function Experience() {
     <div className={style.container}>
       <div className={style.heading}>Experience</div>
       <div className={style.experience_card_list}>
+      <div className={style.experience_card_wrapper}>
+          <div className={style.experience_card}>
+            <a
+              href="https://samta.ai/"
+              target="_blank"
+              rel="noreferrer"
+              className={style.company_name}
+            >
+              Samta
+            </a>
+            <div className={style.post}>SDE</div>
+            <div className={style.duration}>Nov 2022 - Present</div>
+            <div className={style.summary}>
+            Building banking application for the global market other than that Managing frontend team on multiple internal and client projects.            </div>
+          </div>
+        </div>
         <div className={style.experience_card_wrapper}>
           <div className={style.experience_card}>
             <a
@@ -17,7 +33,7 @@ function Experience() {
               Blackcoffer
             </a>
             <div className={style.post}>Web Developer</div>
-            <div className={style.duration}>Mar 2021 - Present</div>
+            <div className={style.duration}>Mar 2021 - Nov 2022</div>
             <div className={style.summary}>
               Working on variety of projects such as website development, backend development and maintenance using <span className={style.highlight}>React</span>, <span className={style.highlight}>express</span>,
               <span className={style.highlight}> Azure function </span> and <span className={style.highlight}>various database technologies</span>
